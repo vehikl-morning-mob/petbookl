@@ -8,7 +8,6 @@ export class CatsController {
   constructor(private catsService: CatsService) {}
 
   @Post()
-  // @Res() -- docs library specific response object
   async create(@Body() createCatDto: CreateCatDto): Promise<any> {
     this.catsService.create(createCatDto);
   }
